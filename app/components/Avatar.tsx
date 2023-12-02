@@ -8,6 +8,8 @@ const Avatar = () => {
 height="30"
 width="30"
 alt="Avatar"
+priority
+style={{ width: "auto", height: "auto" }}
  src="/images/placeholder.jpg" />
     );
 }
