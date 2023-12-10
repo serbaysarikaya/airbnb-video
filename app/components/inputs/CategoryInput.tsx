@@ -3,22 +3,22 @@
 import { IconType } from "react-icons";
 
 interface CategoryBoxProps {
-    icon: IconType,
-    label: string;
-    selected?: boolean;
-    onClick: (value: string) => void;
+  icon: IconType,
+  label: string;
+  selected?: boolean;
+  onClick: (value: string) => void;
 }
 
 const CategoryBox: React.FC<CategoryBoxProps> = ({
-    icon: Icon,
-    label,
-    selected,
-    onClick
+  icon: Icon,
+  label,
+  selected,
+  onClick
 }) => {
-    return (
-        <div
-            onClick={() => onClick(label)}
-            className={`
+  return ( 
+    <div
+      onClick={() => onClick(label)}
+      className={`
         rounded-xl
         border-2
         p-4
@@ -30,13 +30,13 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
         cursor-pointer
         ${selected ? 'border-black' : 'border-neutral-200'}
       `}
-        >
-            <Icon size={30} />
-            <div className="font-semibold">
-                {label}
-            </div>
-        </div>
-    );
+    >
+      <Icon size={30} />
+      <div className="font-semibold">
+        {label}
+      </div>
+    </div>
+   );
 }
-
+ 
 export default CategoryBox;
