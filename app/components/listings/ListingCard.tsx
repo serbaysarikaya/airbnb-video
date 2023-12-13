@@ -3,7 +3,7 @@
 import { Listing, Reservation } from "@prisma/client";
 import { useRouter } from "next/navigation";
 
-import { SafeUser } from "@/app/types";
+import { SafeListing, SafeUser } from "@/app/types";
 import useCountries from "@/app/hooks/useCountries";
 import React, { useCallback, useMemo } from "react";
 import { format } from 'date-fns';
@@ -14,7 +14,7 @@ import Button from "../Button";
 
 // 05:04:00 Fetching listings with server components (Listing card component, direct server action)
 interface ListingCardProps {
-    data: Listing;
+    data: SafeListing;
     reservation?: Reservation;
     onAction?: (id: string) => void;
     disabled?: boolean;
