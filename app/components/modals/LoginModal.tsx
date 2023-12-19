@@ -53,7 +53,7 @@ const LoginModal = () => {
     })
    
       .then((callback) => {
-        console.log('123123')
+        
         setIsLoading(false);
 
         if (callback?.ok) {
